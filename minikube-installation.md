@@ -12,13 +12,13 @@ sudo systemctl enable docker
 if you are running your virtual machine on a Windows based OS use the below command
 
 ```bash
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 ```
 
 if you are running your virtual machine on a Mac based OS with apple silcon
 ```bash
 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
+sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
 
 ```
 Now we need to install the minikube
@@ -39,15 +39,15 @@ minikube status
 
 for windows base OS machine using VM
 ```bash
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
 for Mac base OS apple silcon machine using VM
 ```bash
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
+sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
 ```
 
 ```bash
-chmod +x kubectl
+sudo  +x kubectl
 sudo mv kubectl /usr/local/bin/
 kubectl version
 ```
