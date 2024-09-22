@@ -1,5 +1,6 @@
 # CICD-Deploying-using-K8s-and-Jenkins-simple-project
 
+sudo git clone project url from http
 Make sure we have already Jenkins installed if you haven't kindly check the file of jenkins installation based on your machine OS
 Make sure also to install minikube as we will be using minikube to deploy kubernetes cluster in this project 
 you can find teh step to install minikube on the minikube installion file
@@ -47,6 +48,12 @@ create new job called k8s-deployment
 select freestyle
 select add time stamps
 then go to build actions and select execute shell and write the below command to apply the deployment
+
+cd /var/lib/jenkins
+sudo mkdir workspace
+cd workspace
+sudo git clone https://github.com/seraageldin/CICD-Deploying-using-K8s-and-Jenkins-simple-project.git
+
 ```bash
 cd ${JENKINS_HOME}/workspace/clone # we need to be in teh path for the deployment file in, you can use pwd for exact path
 kubectl apply -f deployment-1.yml
