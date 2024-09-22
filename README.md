@@ -49,13 +49,16 @@ select freestyle
 select add time stamps
 then go to build actions and select execute shell and write the below command to apply the deployment
 
-cd /var/lib/jenkins
-sudo mkdir workspace
-cd workspace
-sudo git clone https://github.com/seraageldin/CICD-Deploying-using-K8s-and-Jenkins-simple-project.git
 
 ```bash
 cd ${JENKINS_HOME}/workspace/clone # we need to be in teh path for the deployment file in, you can use pwd for exact path
-kubectl apply -f deployment-1.yml
+sudo -u {USER} kubectl apply -f deployment-1.yml
 ```
 note that you need to be at the jenkins repo insdie the user and workspace dir
+
+we need to set the deploy after clone beacuse there is no image build since we already have it 
+NOTE that the actions to be run as teh sudo user not the jenkins user as teh minikueb cluster exists on that user not jenkins
+so you have 2 options to run the minikube cluster as jenkins user or make teh command run by another user privelages 
+sudo -u {USER} #your user name
+
+
