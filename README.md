@@ -92,4 +92,5 @@ we will go to the deployment-1.yml file and chnage the image type to nginx
 and we go to the terminal and watch the old pods get terminated and new ones get created
 ```bash
 watch kubectl get pods
+make sure jenkins in docker group
 ```
