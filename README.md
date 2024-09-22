@@ -71,6 +71,11 @@ then to save you need to click :wq! to save teh changes and exit
 ```
 
 #then now we need to go to jenkins and create our jobs 
+create a freestyle clone job to clone from github repo
+select add timestamps
+do not forget to select the main branch
+provide the repo url and set the Pull SCM ( H/3 * * * * )
+save
 
 create new job called k8s-deployment
 select freestyle
