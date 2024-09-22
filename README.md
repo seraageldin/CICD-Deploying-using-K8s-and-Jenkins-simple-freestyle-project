@@ -93,4 +93,5 @@ and we go to the terminal and watch the old pods get terminated and new ones get
 ```bash
 watch kubectl get pods
 make sure jenkins in docker group
+sudo usermod -aG docker jenkins 
 ```
