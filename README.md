@@ -52,7 +52,7 @@ then go to build actions and select execute shell and write the below command to
 
 ```bash
 cd ${JENKINS_HOME}/workspace/clone # we need to be in teh path for the deployment file in, you can use pwd for exact path
-sudo -u {USER} kubectl apply -f deployment-1.yml
+kubectl apply -f deployment-1.yml
 ```
 note that you need to be at the jenkins repo insdie the user and workspace dir
 
