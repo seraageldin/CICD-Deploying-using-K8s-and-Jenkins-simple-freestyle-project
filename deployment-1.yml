@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: app
   name: app
@@ -10,10 +9,10 @@ spec:
   selector:
     matchLabels:
       app: app
-  strategy: {}
+  strategy: 
+    type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: app
     spec:
@@ -21,4 +20,3 @@ spec:
       - image: httpd
         name: httpd
         resources: {}
-status: {}
