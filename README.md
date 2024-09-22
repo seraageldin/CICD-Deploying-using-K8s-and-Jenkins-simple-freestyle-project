@@ -67,3 +67,6 @@ go to the last line add
 yourusername ALL=(ALL:ALL) NOPASSWD: ALL
 
 so we need to run the cluster using the jenkins user
+id jenkins
+su - jenkins
+sudo passwd jenkins 
