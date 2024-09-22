@@ -1,3 +1,4 @@
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,3 +21,4 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
+```
