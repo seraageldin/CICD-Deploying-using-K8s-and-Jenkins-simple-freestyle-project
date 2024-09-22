@@ -83,6 +83,13 @@ we will edit the number of replicas in the deployment-1.yml file in our github r
 that will trigger jenkins and it will create extra two more pods 
 we can trace this live be 
 ```bash
-watch kubectl get all
+watch kubectl get pods
 ```
 and watch the new pods getting create 
+
+lets have more fun and see the rolling update strategy
+we will go to the deployment-1.yml file and chnage the image type to nginx
+and we go to the terminal and watch the old pods get terminated and new ones get created
+```bash
+watch kubectl get pods
+```
