@@ -70,3 +70,19 @@ so we need to run the cluster using the jenkins user
 id jenkins
 su - jenkins
 sudo passwd jenkins 
+after editing anything in the repo the jenkins will be triggered
+before triggering we can go to terminal and watch the pods
+if we 
+kubectl get all
+we wont find any pods 
+after jenkins runs the jobs
+if we try kubectl get all again
+we will find the pods
+now we want to make it even more fund and dynamic 
+we will edit the number of replicas in the deployment-1.yml file in our github repo 
+that will trigger jenkins and it will create extra two more pods 
+we can trace this live be 
+```bash
+watch kubectl get all
+```
+and watch the new pods getting create 
