@@ -37,4 +37,18 @@ or instead to make this step in 2x1 we will run the command above and use the re
 ```bash
 kubectl create deployment app --replicas 3 --image httpd -o yaml --dry-run=client > deployment-1.yml
 ```
+note that i used sudo vim deployment-1.yml to get inside the file and edit the below
+click I then i added type under strategy for the rolling back which is RollingUpdate
+then to save you need to click :wq! to save teh changes and exit
 
+then now we need to go to jenkins and create our jobs 
+
+create new job called k8s-deployment
+select freestyle
+select add time stamps
+then go to build actions and select execute shell and write the below command to apply the deployment
+```bash
+cd ${JENKINS_HOME}/workspace/clone # we need to be in teh path for the deployment file in, you can use pwd for exact path
+kubectl apply -f deployment-1.yml
+```
+note that you need to be at the jenkins repo insdie the user and workspace dir
