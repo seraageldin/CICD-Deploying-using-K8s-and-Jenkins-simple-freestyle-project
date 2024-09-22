@@ -61,4 +61,8 @@ NOTE that the actions to be run as teh sudo user not the jenkins user as teh min
 so you have 2 options to run the minikube cluster as jenkins user or make teh command run by another user privelages 
 sudo -u {USER} #your user name
 
+for no password 
+sudo visudo
+go to the last line add
+yourusername ALL=(ALL:ALL) NOPASSWD: ALL
 
