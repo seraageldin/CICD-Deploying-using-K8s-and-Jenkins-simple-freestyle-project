@@ -1,0 +1,18 @@
+
+sudo apt install expect
+script to enetr password auto
+
+#!/usr/bin/expect
+set timeout 10
+spawn sudo -u user <command> 
+expect "password:"
+send "password\r"
+interact
+
+#!/usr/bin/expect
+set timeout 10
+spawn sudo -u serageldinux su - jenkins
+expect "password:"
+send "jenkins\r"
+interact
+
