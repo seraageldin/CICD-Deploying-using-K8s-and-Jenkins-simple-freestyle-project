@@ -38,5 +38,3 @@ or instead to make this step in 2x1 we will run the command above and use the re
 kubectl create deployment app --replicas 3 --image httpd -o yaml --dry-run=client > deployment-1.yml
 ```
 
-
-```
